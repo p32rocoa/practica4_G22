@@ -9,7 +9,7 @@
 
 ##### **ID:** 004 | **Borrar alumno** | **Tiempo estimado:** 1 | **Prioridad:** 2
 
-##### **ID:** 005 | **Insertar alumno** | **Tiempo estimado:** 2 | **Prioridad:** 0
+##### **ID:** 005 | **Insertar alumno** | **Tiempo estimado:** 2 | **Prioridad:** 1
 
 ##### **ID:** 006 | **Mostrar grupo** | **Tiempo estimado:** 2 | **Prioridad:** 4
 
@@ -36,7 +36,7 @@
 ### **Funciones internas auxiliares:**
 <br>
 
-##### **Buscar alumno** | **Tiempo estimado:** 3 | **Prioridad:** 1
+##### **Buscar alumno** | **Tiempo estimado:** 3 | **Prioridad:** 0
 
 ##### **Buscar grupo** | **Tiempo estimado:** 3 | **Prioridad:** 3
 
