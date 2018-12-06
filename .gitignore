@@ -1,5 +1,2 @@
-.gitignore
-a.out
-main 
-persona.cpp
-aux.txt
+*.out
+*.txt
