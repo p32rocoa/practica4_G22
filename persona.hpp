@@ -1,8 +1,6 @@
 #ifndef PERSONA_H
 #define PERSONA_H
 
-#include <iostream>
-
 class Persona
 {
     private:
@@ -14,9 +12,9 @@ class Persona
         Persona(){};
         
         //Getters
-        inline std::string getDNI() {return dni_;}
-        inline std::string getNombre() {return nombre_;}
-        inline std::string getApellidos() {return apellidos_;}
+        inline std::string getDNI() const {return dni_;}
+        inline std::string getNombre() const {return nombre_;}
+        inline std::string getApellidos() const {return apellidos_;}
 
         //Setters
         inline void setDNI(std::string new_dni) {dni_ = new_dni;}

@@ -1,10 +1,11 @@
 #include <iostream>
 #include "persona.hpp"
+#include "profesor.hpp"
+#include "alumno.hpp"
 
 int main ()
 {
     std::cout << "IS" << std::endl;
-    Persona n;
-    std::cout << n.getNombre() << std::endl; 
+    Profesor p;
     return 0;
 }
