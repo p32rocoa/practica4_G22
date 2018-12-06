@@ -1,3 +1,6 @@
+#ifndef AGENDA_HPP
+#define AGENDA_HPP
+
 #include <list>
 #include <string>
 #include "Alumno.hpp"
@@ -26,5 +29,7 @@ class Agenda
     void listarAlumnos();
     void mostrarAlumno(Alumno alumno);
     void mostrarGrupo(std::list<Alumno> grupo);
-    
+
 };
+
+#endif
