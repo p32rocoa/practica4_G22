@@ -1,3 +1,4 @@
+/*
 #include "persona.hpp"
 
 Persona::Persona() {}
@@ -11,3 +12,5 @@ inline std::string Persona::getApellidos() {return apellidos_;}
 inline void Persona::setDNI(std::string new_dni) {dni_ = new_dni;}
 inline void Persona::setNombre(std::string new_nombre) {nombre_ = new_nombre;}
 inline void Persona::setApellidos(std::string new_apellidos) {apellidos_ = new_apellidos;}
+
+*/
