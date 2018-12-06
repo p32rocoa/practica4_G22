@@ -9,6 +9,6 @@
 ##### Antonio:
 
 - **Reiniciar alumnos** | **Tiempo estimado:** 1 | **Prioridad:** 0
-- **Listar alumnos**    | **Tiempo estimado:** 2 | **Prioridad:** 1
+- **Listar alumnos**    | **Tiempo estimado:** 3 | **Prioridad:** 1
 - **Guardar bd**        | **Tiempo estimado:** 3 | **Prioridad:** 5
 - **Cargar bd**         | **Tiempo estimado:** 3 | **Prioridad:** 5

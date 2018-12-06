@@ -5,7 +5,7 @@
 
 ##### **ID:** 002 | **Modificar alumno** | **Tiempo estimado:** 2 | **Prioridad:** 2
 
-##### **ID:** 003 | **Listar alumnos** | **Tiempo estimado:** 2 | **Prioridad:** 1
+##### **ID:** 003 | **Listar alumnos** | **Tiempo estimado:** 3 | **Prioridad:** 1
 
 ##### **ID:** 004 | **Borrar alumno** | **Tiempo estimado:** 1 | **Prioridad:** 2
 
