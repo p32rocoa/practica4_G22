@@ -19,6 +19,9 @@ class Agenda
 
   public:
 
+    // Constructor
+    Agenda();
+
     // Modificadores de datos de alumnos
     void insertarAlumno();
     void modificarAlumno(Alumno alumno);
