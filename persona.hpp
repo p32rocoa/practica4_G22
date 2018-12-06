@@ -3,31 +3,6 @@
 
 #include <iostream>
 
-/*
-
-class Persona
-{
-    private:
-        std::string dni_;
-        std::string nombre_;
-        std::string apellidos_;
-
-    public:
-        Persona();
-        
-        //Getters
-        std::string getDNI();
-        std::string getNombre();
-        std::string getApellidos();
-
-        //Setters
-        void setDNI(std::string new_dni);
-        void setNombre(std::string new_nombre);
-        void setApellidos(std::string new_apellidos);
-};
-
-*/
-
 class Persona
 {
     private:
