@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include <algorithm>
+#include <string>
 #include "agenda.hpp"
 #include "persona.hpp"
 #include "alumno.hpp"
@@ -23,6 +24,7 @@ void Agenda::reiniciarAlumnos()
   }
 
 }
+
 
 void Agenda::listarAlumnos()
 {
@@ -64,10 +66,32 @@ void Agenda::listarAlumnos()
     } while(mode!=1 and mode!=2);
 
     // Se ordena la lista
+    for(it=_alumnos.begin(); it!=(_alumnos.end()-1); it++) {
+      for(it2=_alumnos.begin(); it2!=(_alumnos.end()-it-1); it2++) {
+        if((option==1 and it2->getApellidos().compare((it2+1)->getApellidos())>0) or
+           (option==2 and it2->getDNI().compare((it2+1)->getDNI())>0) or
+           (option==3 and it2->getCurso_mas_alto_matriculado()>(it2+1)->getCurso_mas_alto_matriculado()))
+        {
+          std::swap(*it2, *(it2+1));
+        }
+      }
+    }
 
-
+    if(mode==2) // Cambio a modo descendente
+      _alumnos.reverse();
 
     // Markdown o HTML
+
+    // toDo Pedir nombre del fichero 
+
+    if(type==1)
+    {
+      // toDo Markdown
+    }
+    else
+    {
+      // toDo HTML
+    }
 
   }
 }
