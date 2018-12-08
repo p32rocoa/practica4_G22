@@ -32,6 +32,12 @@ class Alumno : public Persona
         inline void setCurso_mas_alto_matriculado(int new_curso_mas_alto) {curso_mas_alto_ = new_curso_mas_alto;}
         inline void setGrupo(int new_grupo) {grupo_ = new_grupo;}
         inline void setRol(bool new_rol) {rol_ = new_rol;}
+
+        //Aux
+        bool operator==(const Alumno& rhs)
+        {
+            return (this->getDNI()==rhs.getDNI());
+        }
 };
 
 #endif
