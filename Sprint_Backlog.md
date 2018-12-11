@@ -1,14 +1,14 @@
 ##### Francisco:
 
-- **Buscar alumno**    | **Tiempo estimado:** 3 | **Prioridad:** 0
-- **Insertar alumno**  | **Tiempo estimado:** 2 | **Prioridad:** 1
-- **Borrar alumno**    | **Tiempo estimado:** 1 | **Prioridad:** 2
-- **Modificar alumno** | **Tiempo estimado:** 2 | **Prioridad:** 2
-- **Mostrar alumno**   | **Tiempo estimado:** 2 | **Prioridad:** 2
+- **Buscar grupo**                 | **Tiempo estimado:** 3 | **Prioridad:** 3
+- **Mostrar grupo**                | **Tiempo estimado:** 2 | **Prioridad:** 4
+- **Buscar profesor**              | **Tiempo estimado:** 2 | **Prioridad:** 7
+- **Registrar profesor**           | **Tiempo estimado:** 2 | **Prioridad:** 7
+- **Borrar profesor**              | **Tiempo estimado:** 1 | **Prioridad:** 8
 
 ##### Antonio:
 
-- **Reiniciar alumnos** | **Tiempo estimado:** 1 | **Prioridad:** 0
-- **Listar alumnos**    | **Tiempo estimado:** 3 | **Prioridad:** 1
-- **Guardar bd**        | **Tiempo estimado:** 3 | **Prioridad:** 5
-- **Cargar bd**         | **Tiempo estimado:** 3 | **Prioridad:** 5
+- **Guardar copia de seguridad**   | **Tiempo estimado:** 3 | **Prioridad:** 6
+- **Cargar copia de seguridad**    | **Tiempo estimado:** 3 | **Prioridad:** 6
+- **Iniciar sesión**               | **Tiempo estimado:** 1 | **Prioridad:** 9
+- **Cerrar sesión**                | **Tiempo estimado:** 1 | **Prioridad:** 9
