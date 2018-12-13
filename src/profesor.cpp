@@ -6,7 +6,7 @@
 
 void Profesor::guardarBD()
 {
-  ofstream fichero("DataBase.bin", ios::out | ios::binary);
+  std::ofstream fichero("DataBase.bin", ios::out | ios::binary);
   std::list<Alumno>::iterator it;
 
   if(fichero)
@@ -22,7 +22,7 @@ void Profesor::guardarBD()
 
 void Profesor::cargarBD()
 {
-  ifstream fichero("DataBase.bin", ios::in | ios::binary);
+  std::ifstream fichero("DataBase.bin", ios::in | ios::binary);
   std::list<Alumno>::iterator it;
 
   if(fichero)
