@@ -3,7 +3,8 @@
 
 #include <list>
 #include <string>
-#include "Alumno.hpp"
+#include "alumno.hpp"
+#include "profesor.hpp"
 
 
 class Agenda
@@ -20,7 +21,7 @@ class Agenda
   public:
 
     // Constructor
-    Agenda();
+    Agenda(){};
 
     // Modificadores de datos de alumnos
     void insertarAlumno();
@@ -32,6 +33,8 @@ class Agenda
     void listarAlumnos();
     void mostrarAlumno(Alumno alumno);
     void mostrarGrupo(std::list<Alumno> grupo);
+
+    // friend void Profesor::cargarBD();
 
 };
 
