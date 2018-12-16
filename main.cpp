@@ -10,14 +10,14 @@ int main ()
     Alumno search;
     std::string buffer;
     a.insertarAlumno();
-    std::cout << "Introduzca el DNI del alumno a buscar: ";
-    std::getline(std::cin, buffer);
-    search = a.buscarAlumno(buffer);
     a.mostrarAlumno(search);
+    std::cout << "a.modificarAlumno(search);" << std::endl;
     a.modificarAlumno(search);
-    search = a.buscarAlumno(buffer);
+    std::cout << "a.mostrarAlumno(search);" << std::endl;
     a.mostrarAlumno(search);
+    std::cout << "a.borrarAlumno(search);" << std::endl;
     a.borrarAlumno(search);
+    std::cout << "a.listarAlumnos();" << std::endl;
     a.listarAlumnos();
     return 0;
 }

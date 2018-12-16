@@ -13,6 +13,19 @@ class Alumno : public Persona
         bool rol_;
 
     public:
+        Alumno(const Alumno& rhs)
+        {
+            this->setDNI(rhs.getDNI());
+            this->setNombre(rhs.getNombre());
+            this->setApellidos(rhs.getApellidos());
+            this->setCorreo_electronico(rhs.getCorreo_electronico());
+            this->setFecha_de_nacimiento(rhs.getFecha_de_nacimiento());
+            this->setDomicilio(rhs.getDomicilio());
+            this->setTelefono(rhs.getTelefono());
+            this->setCurso_mas_alto_matriculado(rhs.getCurso_mas_alto_matriculado());
+            this->setGrupo(rhs.getGrupo());
+            this->setRol(rhs.getRol());
+        }
         Alumno(){};
         
         //Getters
@@ -37,6 +50,35 @@ class Alumno : public Persona
         bool operator==(const Alumno& rhs)
         {
             return (this->getDNI()==rhs.getDNI());
+        }        
+        
+        void operator =(const Alumno& rhs)
+        {
+            this->setDNI(rhs.getDNI());
+            this->setNombre(rhs.getNombre());
+            this->setApellidos(rhs.getApellidos());
+            this->setCorreo_electronico(rhs.getCorreo_electronico());
+            this->setFecha_de_nacimiento(rhs.getFecha_de_nacimiento());
+            this->setDomicilio(rhs.getDomicilio());
+            this->setTelefono(rhs.getTelefono());
+            this->setCurso_mas_alto_matriculado(rhs.getCurso_mas_alto_matriculado());
+            this->setGrupo(rhs.getGrupo());
+            this->setRol(rhs.getRol());
+        }
+
+        void reset()
+        {
+            Alumno empty;
+            this->setDNI(empty.getDNI());
+            this->setNombre(empty.getNombre());
+            this->setApellidos(empty.getApellidos());
+            this->setCorreo_electronico(empty.getCorreo_electronico());
+            this->setFecha_de_nacimiento(empty.getFecha_de_nacimiento());
+            this->setDomicilio(empty.getDomicilio());
+            this->setTelefono(empty.getTelefono());
+            this->setCurso_mas_alto_matriculado(empty.getCurso_mas_alto_matriculado());
+            this->setGrupo(empty.getGrupo());
+            this->setRol(empty.getRol());
         }
 };
 
