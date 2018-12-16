@@ -11,6 +11,7 @@ int main ()
 {
   std::string auxMenu="repetir", foo;
   Profesor p;
+  Alumno a_aux;
 
   // Menú principal
   while(true){
@@ -123,11 +124,11 @@ int main ()
       }
       else if(auxMenu=="2")
       {
-        // p.getAgenda()->modificarAlumno();
+        p.getAgenda()->modificarAlumno(a_aux);
       }
       else if(auxMenu=="3")
       {
-        // p.getAgenda()->borrarAlumno();
+        p.getAgenda()->borrarAlumno(a_aux);
       }
       else if(auxMenu=="4")
       {
