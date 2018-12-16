@@ -5,10 +5,10 @@
 #include <list>
 #include <string>
 #include <fstream>
+#include "profesor.hpp"
 #include "agenda.hpp"
 #include "persona.hpp"
 #include "alumno.hpp"
-#include "profesor.hpp"
 
 
 Alumno Agenda::buscarAlumno(std::string dato)
@@ -25,7 +25,10 @@ Alumno Agenda::buscarAlumno(std::string dato)
 
 std::list<Alumno> Agenda::buscarGrupo(int numGrupo)
 {
+  std::list<Alumno> lista;
   // toDo
+
+  return lista;
 }
 
 
@@ -148,6 +151,7 @@ void Agenda::reiniciarAlumnos()
     system("clear");
     std::cout << "¿Estás seguro de borrar toda la lista de alumnos actual? (S/N)" << std::endl;
     std::cin >> option;
+    getchar();
   } while(option!="S" and option!="s" and option!="N" and option!="n");
 
   if(option=="S" or option=="s")  // Se limpia la lista
@@ -160,17 +164,16 @@ void Agenda::reiniciarAlumnos()
 
 void Agenda::listarAlumnos()
 {
-  std::string option, mode, type, fileName;
+  std::string option, mode, type, fileName, foo;
   std::list<Alumno>::iterator it, it2;
   int aux_it=1;
 
   if(_alumnos.empty())  // Se comprueba que la lista no esté vacía
   {
     system("clear");
-    std::string foo;
     std::cout << "La lista de alumnos está vacía." << std::endl;
     std::cout << "\nPulsa ENTER para continuar..." << std::endl;
-    std::cin >> foo;
+    std::getline(std::cin, foo);
   }
   else
   {
@@ -180,6 +183,7 @@ void Agenda::listarAlumnos()
       std::cout << "\t1. Markdown." << std::endl;
       std::cout << "\t2. HTML." << std::endl;
       std::cin >> type;
+      getchar();
     } while(type!="1" and type!="2");
 
     do {
@@ -189,6 +193,7 @@ void Agenda::listarAlumnos()
       std::cout << "\t2. Ordenar por DNI." << std::endl;
       std::cout << "\t3. Ordenar por curso más alto matriculado." << std::endl;
       std::cin >> option;
+      getchar();
     } while(option!="1" and option!="2" and option!="3");
 
     do {
@@ -197,6 +202,7 @@ void Agenda::listarAlumnos()
       std::cout << "\t1. Ascendente." << std::endl;
       std::cout << "\t2. Descendente." << std::endl;
       std::cin >> mode;
+      getchar();
     } while(mode!="1" and mode!="2");
 
     // Se ordena la lista de alumnos ascendentemente
@@ -221,6 +227,7 @@ void Agenda::listarAlumnos()
     do {
       std::cout << "\nIntroduce el nombre que tendrá el fichero (sin extensión):" << std::endl;
       std::cin >> fileName;
+      getchar();
 
       if(type=="1")
       fileName = fileName + ".md";
@@ -235,7 +242,9 @@ void Agenda::listarAlumnos()
 
     std::ofstream fichero(fileName);
     if (!fichero) {
-      std::cout << "Error al abrir el fichero." << '\n';
+      std::cout << "Error al abrir el fichero." << std::endl;
+      std::cout << "\n\nPulsa ENTER para continuar." << std::endl;
+      std::getline(std::cin, foo);
       return;
     }
 
@@ -251,9 +260,9 @@ void Agenda::listarAlumnos()
         fichero << i.getFecha_de_nacimiento()<<"|"<<i.getDomicilio()<<"|"<<i.getTelefono()<<"|";
         fichero << i.getCurso_mas_alto_matriculado()<<"|"<<i.getGrupo()<<"|";
         if(i.getRol())
-          fichero << "**Sí**|";
+          fichero << "**Sí**|\n";
         else
-          fichero << "No|";
+          fichero << "No|\n";
       }
     }
     else  // HTML
@@ -287,39 +296,44 @@ void Agenda::listarAlumnos()
       fichero << "</table>\n</body>\n</html>";
     }
     fichero.close();
+
+    system("clear");
+    std::cout << "El archivo ha sido creado.\n";
+    std::cout << "\n\nPulsa ENTER para continuar." << std::endl;
+    std::getline(std::cin, foo);
   }
 }
 
 
-void Agenda::mostrarAlumno(Alumno alumno)
+void Agenda::mostrarAlumno()
 {
-  std::cout << "DNI: " << std::endl;
-  std::cout << alumno.getDNI() << std::endl;
-  std::cout << "Nombre: " << std::endl;
-  std::cout << alumno.getNombre() << std::endl;
-  std::cout << "Apellidos: " << std::endl;
-  std::cout << alumno.getApellidos() << std::endl;
-  std::cout << "Correo: " << std::endl;
-  std::cout << alumno.getCorreo_electronico() << std::endl;
-  std::cout << "Fecha de nacimiento: " << std::endl;
-  std::cout << alumno.getFecha_de_nacimiento() << std::endl;
-  std::cout << "Domicilio: " << std::endl;
-  std::cout << alumno.getDomicilio() << std::endl;
-  std::cout << "Telefono: " << std::endl;
-  std::cout << alumno.getTelefono() << std::endl;
-  std::cout << "Curso: " << std::endl;
-  std::cout << alumno.getCurso_mas_alto_matriculado() << std::endl;
-  std::cout << "Grupo: " << std::endl;
-  std::cout << alumno.getGrupo() << std::endl;
-  std::cout << "Lider: " << std::endl;
-  if(alumno.getRol())
-    std::cout << "Si" << std::endl;
-  else
-    std::cout << "No" << std::endl;
+  // std::cout << "DNI: " << std::endl;
+  // std::cout << alumno.getDNI() << std::endl;
+  // std::cout << "Nombre: " << std::endl;
+  // std::cout << alumno.getNombre() << std::endl;
+  // std::cout << "Apellidos: " << std::endl;
+  // std::cout << alumno.getApellidos() << std::endl;
+  // std::cout << "Correo: " << std::endl;
+  // std::cout << alumno.getCorreo_electronico() << std::endl;
+  // std::cout << "Fecha de nacimiento: " << std::endl;
+  // std::cout << alumno.getFecha_de_nacimiento() << std::endl;
+  // std::cout << "Domicilio: " << std::endl;
+  // std::cout << alumno.getDomicilio() << std::endl;
+  // std::cout << "Telefono: " << std::endl;
+  // std::cout << alumno.getTelefono() << std::endl;
+  // std::cout << "Curso: " << std::endl;
+  // std::cout << alumno.getCurso_mas_alto_matriculado() << std::endl;
+  // std::cout << "Grupo: " << std::endl;
+  // std::cout << alumno.getGrupo() << std::endl;
+  // std::cout << "Lider: " << std::endl;
+  // if(alumno.getRol())
+  //   std::cout << "Si" << std::endl;
+  // else
+  //   std::cout << "No" << std::endl;
 }
 
 
-void Agenda::mostrarGrupo(std::list<Alumno> grupo)
+void Agenda::mostrarGrupo()
 {
   // toDo
 }

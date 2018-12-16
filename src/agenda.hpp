@@ -23,6 +23,9 @@ class Agenda
     // Constructor
     Agenda(){};
 
+    // Observador de la lista de alumnos
+    std::list<Alumno> * getLista() {return &_alumnos;}
+
     // Modificadores de datos de alumnos
     void insertarAlumno();
     void modificarAlumno(Alumno alumno);
@@ -31,10 +34,8 @@ class Agenda
 
     // Observadores de datos de alumnos
     void listarAlumnos();
-    void mostrarAlumno(Alumno alumno);
-    void mostrarGrupo(std::list<Alumno> grupo);
-
-    // friend void Profesor::cargarBD();
+    void mostrarAlumno();
+    void mostrarGrupo();
 
 };
 

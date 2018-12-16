@@ -20,9 +20,9 @@ profesor.o: profesor.cpp
 .PHONY: clean cleanExe
 
 clean:
-	#@rm -f *.o
+	@rm -f *.o
 	@echo "Makefile: Ficheros objeto eliminados."
 
 cleanExe:
-	#@rm -f main
-	@echo "Makefile: Archivos ejecutables eliminados."
+	@rm -f main
+	@echo "Makefile: Archivo ejecutable eliminado."
